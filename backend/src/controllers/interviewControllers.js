@@ -1,5 +1,5 @@
 import multer from 'multer';
-// import pdfParse from 'pdf-parse';
+import pdfParse from 'pdf-parse';
 import dotenv from "dotenv";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
