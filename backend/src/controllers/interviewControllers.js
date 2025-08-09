@@ -1,5 +1,5 @@
 import multer from 'multer';
-import pdfParse from 'pdf-parse';
+// import pdfParse from 'pdf-parse';
 import dotenv from "dotenv";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
@@ -17,6 +17,7 @@ export const upload = multer({ storage: storage });
  * Upload & parse resume PDF
  */
 export async function uploadResume(req, res) {
+  const pdfParse = (await import('pdf-parse')).default; 
   try {
     if (!req.file) {
       return res.status(400).json({ message: "No file uploaded! Please attach a PDF resume." });
