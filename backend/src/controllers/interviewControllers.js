@@ -27,7 +27,7 @@ export async function uploadResume(req, res) {
     const pdfBuffer = req.file.buffer;
 
     // Extract text
-    const pdfData = await pdfParse(pdfBuffer);
+    const pdfData = await pdfParse(pdfBuffer, { max: 0 });
     const resumeText = pdfData.text;
 
     if (!resumeText || resumeText.trim() === '') {

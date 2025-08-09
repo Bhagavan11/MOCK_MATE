@@ -2,5 +2,5 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "https://mock-mate-ro7k.onrender.com",
+  baseURL: "http://localhost:5000",
 });
