@@ -1,0 +1,271 @@
+/* ======================
+   BASE THEME
+   ====================== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #eee;
+}
+
+h1,
+h2,
+h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  min-height: 100vh;
+  position: relative;
+}
+
+.section {
+  background: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #222;
+  color: #eee;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: #555;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #333;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ======================
+   FORM ROWS
+   ====================== */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-direction: column;
+    min-width: 150px;
+}
+
+.form-group {
+  flex: 1 1 1 250px;
+  gap : 1rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+/* Upload container */
+.upload-container {
+  width: 100%;
+  max-width: 800px;
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem auto;
+  box-sizing: border-box;
+}
+
+/* File input spacing */
+.upload-container input[type="file"] {
+  margin-bottom: 1rem;
+}
+
+/* ======================
+   HOME BUTTON
+   ====================== */
+.home-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.home-button:hover {
+  background: #333;
+}
+
+/* ======================
+   QUESTIONS SECTION
+   ====================== */
+.question-container {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin: 2rem 0;
+}
+
+.question-progress {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.question-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.answer-input {
+  resize: vertical;
+}
+
+/* ======================
+   SUBMIT ANSWERS
+   ====================== */
+.submit-answers-container {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* ======================
+   EVALUATION
+   ====================== */
+.evaluation-container {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.evaluation-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.evaluation-card p {
+  margin: 0.5rem 0;
+}
+
+.evaluation-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.evaluation-progress {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* ======================
+   LOADING OVERLAY
+   ====================== */
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 6px solid #444;
+  border-top: 6px solid #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* ======================
+   RESPONSIVE
+   ====================== */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .upload-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .home-button {
+    position: static;
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .evaluation-controls {
+    flex-direction: column;
+  }
+}
