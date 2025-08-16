@@ -10,7 +10,7 @@ export const useInterviewStore = create((set, get) => ({
   currentIndex: 0,
   loading: "",
 
-  uploadResume: async (file, company = "", role = "", numQuestions = 10) => {
+  uploadResume: async (file, company = "", role = "", numQuestions) => {
     if (!file) {
       toast.error("Please select a file!");
       return;
